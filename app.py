@@ -553,8 +553,9 @@ Metin: {metin}"""}
                             {harita['ana_konu']}
                         </div>
                         """, unsafe_allow_html=True)
-                        cols = st.columns(len(harita['kavramlar']))
-                        for idx, kavram in enumerate(harita['kavramlar']):
+                        kavramlar = harita['kavramlar'][:4]  # max 4 kavram
+                        cols = st.columns(len(kavramlar))
+                        for idx, kavram in enumerate(kavramlar):
                             with cols[idx]:
                                 alt_liste = "".join([f"<li style='margin:4px 0'>{a}</li>" for a in kavram['alt_kavramlar']])
                                 st.markdown(f"""
