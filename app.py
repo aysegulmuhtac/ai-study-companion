@@ -562,8 +562,9 @@ Metin: {metin}"""}
                                     <ul style="font-size:0.8rem;color:#888;padding-left:16px;margin:0">{alt_liste}</ul>
                                 </div>
                                 """, unsafe_allow_html=True)
-                    except:
-                        st.error("Kavram haritasi olusturulamadi, tekrar dene.")
+                    except Exception as e:
+                        st.error(f"Hata: {e}")
+                        st.write("Ham cevap:", ham)
  
 else:
     st.markdown("""
