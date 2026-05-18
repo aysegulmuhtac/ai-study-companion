@@ -553,13 +553,12 @@ Metin: {metin}"""}
                             {harita['ana_konu']}
                         </div>
                         """, unsafe_allow_html=True)
-                        kavramlar = harita['kavramlar'][:4]  # max 4 kavram
-                        cols = st.columns(len(kavramlar))
+                        kavramlar = harita['kavramlar'][:6]
                         for idx, kavram in enumerate(kavramlar):
-                            with cols[idx]:
+                            with st.container():
                                 alt_liste = "".join([f"<li style='margin:4px 0'>{a}</li>" for a in kavram['alt_kavramlar']])
                                 st.markdown(f"""
-                                <div style="background:white;border-radius:14px;padding:16px;box-shadow:0 4px 15px rgba(0,0,0,0.08);border-top:4px solid #667eea;">
+                                <div style="background:white;border-radius:14px;padding:16px;box-shadow:0 4px 15px rgba(0,0,0,0.08);border-top:4px solid #667eea;margin-bottom:12px;">
                                     <div style="font-weight:700;color:#667eea;font-size:1rem;margin-bottom:8px">{kavram['kavram']}</div>
                                     <div style="font-size:0.85rem;color:#666;margin-bottom:12px">{kavram['aciklama']}</div>
                                     <ul style="font-size:0.8rem;color:#888;padding-left:16px;margin:0">{alt_liste}</ul>
