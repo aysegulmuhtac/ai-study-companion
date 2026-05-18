@@ -542,6 +542,9 @@ Metin: {metin}"""}
                             ham = ham[4:]
                     ham = ham.strip()
                     try:
+                        
+                        st.write("Ham cevap:", ham)  # debug icin
+                        harita = json.loads(ham)
                         harita = json.loads(ham)
                         st.markdown(f"""
                         <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:16px;padding:20px;color:white;text-align:center;font-size:1.3rem;font-weight:700;margin-bottom:20px;">
