@@ -520,7 +520,7 @@ Format:
                     response = client.chat.completions.create(
                         model="llama-3.3-70b-versatile",
                         messages=[
-                            {"role": "system", "content": "Sen bir egitim uzmanisin. Sadece JSON formatinda cevap ver."},
+                            {"role": "system", "content": "Sen bir egitim uzmanisin. Sadece JSON formatinda cevap ver. Turkce ozel karakterleri kullanma, sadece ASCII karakterler kullan. Baska hicbir sey yazma."},
                             {"role": "user", "content": f"""Su metinden kavram haritasi olustur:
 {{
   "ana_konu": "Ana konunun adi",
