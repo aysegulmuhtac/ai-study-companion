@@ -543,7 +543,9 @@ Metin: {metin}"""}
                     ham = ham.strip()
                     try:
                         
-                        st.write("Ham cevap:", ham)  # debug icin
+                        import re
+                        ham = re.sub(r'[\x00-\x08\x0b\x0c\x0e-\x1f\x7f-\x9f]', '', ham)
+                        harita = json.loads(ham)
                         harita = json.loads(ham.encode('utf-8').decode('utf-8'))
                         harita = json.loads(ham.encode('utf-8').decode('utf-8'))
                         st.markdown(f"""
