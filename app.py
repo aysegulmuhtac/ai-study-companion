@@ -544,8 +544,8 @@ Metin: {metin}"""}
                     try:
                         
                         st.write("Ham cevap:", ham)  # debug icin
-                        harita = json.loads(ham)
-                        harita = json.loads(ham)
+                        harita = json.loads(ham.encode('utf-8').decode('utf-8'))
+                        harita = json.loads(ham.encode('utf-8').decode('utf-8'))
                         st.markdown(f"""
                         <div style="background:linear-gradient(135deg,#667eea,#764ba2);border-radius:16px;padding:20px;color:white;text-align:center;font-size:1.3rem;font-weight:700;margin-bottom:20px;">
                             {harita['ana_konu']}
